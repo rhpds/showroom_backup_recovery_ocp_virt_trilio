@@ -11,7 +11,7 @@ Trilio is a leader in cloud-native data protection for Kubernetes, KubeVirt and 
 
 Customers in telecom, defense, automotive and financial services leverage Trilio to recover from disasters, migrate workloads, move workloads to new infrastructure and migrate to new software distributions.
 
-In this demo we will explore many common management activities that virtual administrators often encounter in their day to day workflows.
+In this lab we will explore many common management activities that virtual administrators often encounter in their day to day workflows.
 
 == Who Will Benefit Most from attending a Roadshow?
 

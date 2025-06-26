@@ -1,0 +1,5 @@
+= Conclusion
+
+In this demo, you were asked to create a target, a backup of a namespace and restoring that backup to a new namespace.
+There are many other uses cases covered by Trilio not covered by this demonstration.
+Please feel free to explore the many other capabilities of Trilio on this environment outlined on the https://docs.trilio.io/kubernetes/getting-started/red-hat-openshift[Trilio documentation here^]

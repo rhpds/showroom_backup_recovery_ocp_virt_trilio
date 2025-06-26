@@ -1,0 +1,55 @@
+= Creating a restore
+
+== Introduction
+
+A Trilio Restore is a Kubernetes resource that restores a backup in the same or different namespace.
+
+== Create the restore
+To restore a backup into a new namespace:
+
+. On the left menu, click on *Home -> Projects* and click the *Create Project* button.
+. For *Name* enter `vmrestored` and click *Create*
+. On the left menu, click on *Trilio Backups -> Restores* and ensure the project is selected as *vmrestored*
+. Click on the *Create Restore* button
+. On the *Restore a backup* form, select *backup-1* from the list and click *Next*
+. Enter `vmrestored` in the *Search by name...* field and ensure it is selected and click *Next*
+. For *Restore Name* enter `restore-1` and click *Create*
+. Once the *Restore a backup* form is submitted, you will be redirected to the *Restores* landing page.
+When the status for *restore-1* shows as *Completed*, your restore is complete.
+This process may take a few minutes.
++
+image::restore-restore-complete.png[]
+
+[TIP]
+.Restore progress
+====
+The restore may take approximately 10 minutes to complete.
+If you would like to monitor the progress of the restore, click *Trilio Backups -> Overview* and monitor the *Activity* section for the progress of *restore-1*.
+
+image::restore-restore-progress.png[]
+====
+
+== Validating the restore
+When the restore is complete, we want to ensure that our restore contains all the files we persisted in the backup.
+
+. On the left menu, click on *Virtualization -> VirtualMachines* and on the *Project* drop-down, ensure the project *vmrestored* is selected.
+. Notice that the virtual machine has been restored in your new OpenShift Project.
++
+image::restore-vm-running.png[]
++
+. Click on *winweb01*
+. Click on the *console* tab
+. On the VNC console, enter `15` and hit *enter*
++
+image::restore-vnc-console.png[]
++
+. Run the below command to ensure that the file you created previously is available in the restored virtual machine.
++
+[source,sh,role=execute]
+----
+cat .\backup-file.txt
+----
++
+image::restore-backup-file-valid.png[]
++
+. You have successfully restored a backup to a new namespace using Trilio.

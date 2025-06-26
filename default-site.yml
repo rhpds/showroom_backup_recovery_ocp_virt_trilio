@@ -1,0 +1,25 @@
+---
+site:
+  title: "LB2788 - Backup and Restore for Red Hat OpenShift Virtualization with Trilio"
+  start_page: modules::index.adoc
+
+content:
+  sources:
+  - url: .
+    start_path: content
+
+ui:
+  bundle:
+    url: https://github.com/rhpds/rhdp_showroom_theme/releases/download/rh-summit-2025/ui-bundle.zip
+
+runtime:
+  cache_dir: ./.cache/antora
+
+output:
+  dir: ./www
+
+antora:
+  extensions:
+  - id: dev-mode
+    require: ./content/lib/dev-mode.js
+    enabled: false

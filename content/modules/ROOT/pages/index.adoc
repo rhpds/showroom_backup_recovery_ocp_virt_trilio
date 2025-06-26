@@ -1,0 +1,43 @@
+= LB2788 - Protecting VMs in Red Hat OpenShift Virtualization with Trilio
+
+Welcome to Protecting VMs in Red Hat OpenShift Virtualization with Trilio
+
+== Introduction
+
+This lab is organised to give you hands-on experience with Backup and Restore using Trilio for Red Hat OpenShift Virtualization.
+
+Trilio is a leader in cloud-native data protection for Kubernetes, KubeVirt and OpenStack environments.
+Trilio technology is trusted by cloud infrastructure operators, the largest telco providers, and developers for backup and recovery, migration and application mobility.
+
+Customers in telecom, defense, automotive and financial services leverage Trilio to recover from disasters, migrate workloads and move workloads to new infrastructure.
+
+In this demo, we will explore many common management activities that virtualization administrators often encounter in their day-to-day activities.
+
+== Intended audience
+
+*Virtual machine administrators* -- Those responsible for the day-to-day management of virtual guests in OpenShift Virtualization.
+These users will often find themselves responsible for backing up and restoring virtual guests and the applications running within.
+
+*Virtual infrastructure administrators* -- Those responsible for the physical infrastructure hosting the Backup targets.
+These users will be responsible for physical hardware, storage, and networking changes to the environment, which will ensure the successful restoration of virtual machine resources.
+
+== Content covered in the lab
+
+These are the *four* main sections that will be covered:
+
+* _Operator Installation_: In this section, we will explore the Trilio operator for OpenShift. It was deployed from the OperatorHub.
+
+* _Creating Targets_: In this section, you will create your own Trilio Targets, used to define storage for your backups.
+
+* _Creating Backup Plans_: In this section, an administrator will learn how to create a backup plan and to launch a backup, or create backups on a schedule.
+
+* _Creating Restores_: In this section, an administrator will learn how to restore a previous backup.
+
+== Version information
+
+This edition of the Trilio hands-on lab has been developed using the following software versions:
+
+* Red Hat OpenShift 4.18
+* Red Hat OpenShift Virtualization 4.18
+* Red Hat OpenShift Data Foundation 4.18
+* Trilio 5.0.x

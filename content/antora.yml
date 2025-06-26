@@ -1,0 +1,24 @@
+---
+name: modules
+title: Backup and Restore for Red Hat OpenShift Virtualization with Trilio
+version: master
+nav:
+- modules/ROOT/nav.adoc
+
+asciidoc:
+  attributes:
+    lab_name: Backup and Restore for Red Hat OpenShift Virtualization with Trilio
+    release-version: master
+    page-pagination: true
+    user: dr-admin1-sample
+    password: common-password
+    trilio_password: trilio_password
+    openshift_console_url: https://console-openshift-console.apps-crc.testing
+    vms_namespace: originalvms
+  page-links:
+  - url: https://redhat.com
+    text: Red Hat
+
+  extensions:
+  - ./content/lib/tab-block.js
+  - ./content/lib/remote-include-processor.js

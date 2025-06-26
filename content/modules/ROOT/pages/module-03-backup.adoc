@@ -1,0 +1,75 @@
+= Creating a backup
+
+== Introduction
+
+A Trilio backup is a Kubernetes resource that references the actual backup Trilio creates on the target.
+The backup is taken as either a full or incremental backup as defined by the user in the Backup CR.
+
+Trilio makes it easy to automatically create your backup plans and all required target and policy CRDs from the console.
+
+== Backup validation
+
+Before creating a backup, we want to ensure that our backup is storing our latest files in the target.
+To ensure this is being done, we will create a file on one of the virtual machines to validate the backup.
+
+. On the left menu, click on *Virtualization -> VirtualMachines* and on the *Project* dropdown, ensure the project *{vms_namespace}* is selected.
+. Click on *winweb01*
+. Click on the *console* tab
+. On the VNC console, enter `15` and hit *enter*
++
+image::backup-vnc-console.png[]
++
+. Run the below commands to create a file on the virtual machine and verify it has been created.
++
+[source, bash,role="execute"]
+----
+echo 'Hello World!' > backup-file.txt
+cat .\backup-file.txt
+----
+
+== Create the backup
+
+. On the left menu, click on *Trilio Backups -> Backups* and click the *Create Backup* button
+. On the *Backup a namespace* form, enter `{vms_namespace}` in the *Search by name...* field and ensure it is selected. Click *Next*
+. For *Target*, select *target-1*.
+For more information on how to create a *Backup Schedule* or *Retention Schedule*, refer to this link https://docs.trilio.io/kubernetes/getting-started/red-hat-openshift#about-backup-plans-and-backups[About Backup Plans and Backups^].
+. Click *Next*
+. For *Backup Name*, enter `backup-1` and then click *Create*
++
+[IMPORTANT]
+.Backup error
+====
+If you receive the following error, wait a few seconds and click on *Create* again.
+The *BackupPlan* resource may not yet be available.
+====
++
+image::backup-backup-error.png[]
+. Once the *Backup a namespace* form is submitted, you will be redirected to the *Backups* landing page.
+Once the *status* shows as *Available*, your backup is complete.
++
+image::backup-backup-created.png[]
+
+[TIP]
+.Backup progress
+====
+The backup may take around 10 minutes to complete.
+If you would like to monitor the progress of the backup, click *Trilio Backups -> Overview* and monitor the *Activity* section for the progress of *backup-1*.
+
+image::backup-backup-progress.png[]
+====
+
+.*Light Mode*
+____
+
+Your desktop might be set to "dark mode."
+The Trilio UI does not support dark mode, so you'll need to force your OpenShift console to "light mode."
+To force "light mode," do the following:
+
+. On the OpenShift Console, click on the text *dr-admin1* in the top right corner of the screen and click *User Preferences*.
++
+image::module-5-trilio-ui/access-ui-2.png[]
++
+. Click *Theme* and select *Light*.
++
+image::module-5-trilio-ui/access-ui-3.png[]
+____

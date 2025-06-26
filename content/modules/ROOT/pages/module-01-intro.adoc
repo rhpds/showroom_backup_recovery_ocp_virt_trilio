@@ -1,0 +1,76 @@
+= Backup and recovery of Red Hat OpenShift Virtualization VMs using Trilio
+
+== Introduction
+
+Trilio for Red Hat OpenShift provides fast and easy backup of application containers and virtual machines, disaster and ransomware recovery and application mobility across any cluster, anywhere.
+Trilio gives you the power and flexibility to backup your entire cluster or select a specific namespace(s), label, Helm chart, or Operator as the scope for your backup operations, while minimizing resource consumption by utilizing Incremental Backups, selective workload recovery and more.
+Trilio’s solution allows users to seamlessly backup & recover, upgrade, and migrate workloads, while providing real-time reporting for SLA-based service continuity and Operational Resiliency.
+
+image::intro-trilio-arch.png[]
+
+=== Integrated data protection for OpenShift
+
+Trilio has been enhanced for Red Hat OpenShift environments:
+
+* OpenShift Console Integration
+* OLM Operators Backups and Restores
+* Red Hat Advanced Cluster Management Policies
+* Red Hat Ansible Certified Collection for Trilio automated management.
+
+=== Disaster recovery through Continuous Recovery & Restore
+
+Trilio’s Continuous Recovery & Restore capability enables fast data recovery, migration and replication of stateful applications in seconds or minutes so that all organizations can protect and use their data anywhere, regardless of what the application runs on or where the data is stored.
+This innovation enables data-driven organizations to access ‘Single-Source-of-Truth’ data from multiple heterogeneous clouds simultaneously, from any cloud or storage platform to another, providing near-instantaneous recovery times for your workloads:
+
+* Shorten RTO
+* Save Money and Resources
+* Recover and Move Applications
+* Curate Data from Edge Environments
+
+=== Target browsing and restore flexibility
+
+Enables browsing and restoring backups across different clusters, simplifying disaster recovery, application migration, efficient testing and development, consolidated backup storage and unified backup management (single pane of glass).
+Browse backups from multiple sources, and restore to any cluster.
+
+.*Goals*
+
+* Create a Backup Target
+* Creating a Backup Plan and Backup
+* Creating a Restore
+* Engage the Trilio UI
+
+In this demo, you will be using a Minio S3 object store to host our backed-up files.
+We also have provisioned a namespace *{vms_namespace}* that contains a Virtual Machine, winweb01, which we will attempt to backup and restore.
+
+As a reminder, here are your credentials for the OpenShift Console:
+
+{openshift_console_url}[Your OpenShift cluster console is available here^].
+
+Console login is available with:
+
+.Username:
+[,sh,role="execute",subs="+macros,+attributes"]
+----
+{user}
+----
+
+.Password:
+[,sh,role="execute",subs="+macros,+attributes"]
+----
+{trilio_password}
+----
+
+[IMPORTANT]
+.Trilio Openshift Operator
+====
+The Trilio OpenShift Operator, as well as any required RBAC resources, have been installed on your cluster.
+This lab is focused on the backup and restore capabilities only.
+
+For information relating to the installation of Trilio, please refer to the following documentation:
+
+* https://docs.trilio.io/kubernetes/getting-started/red-hat-openshift[Getting Started with Trilio on Red Hat OpenShift (OCP)^]
+
+*References:*
+
+* https://catalog.redhat.com/software/container-stacks/detail/5ec3fa9528834587a6b85c26[Trilio for OpenShift^]
+====

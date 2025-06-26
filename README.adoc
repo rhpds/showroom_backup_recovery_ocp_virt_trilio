@@ -1,4 +1,4 @@
-Welcome to the Backup and Restore for Red Hat OpenShift Virtualization with Trilio Demo!
+Welcome to the Backup and Restore for Red Hat OpenShift Virtualization with Trilio Lab!
 
 == Introduction
 This repository hosts the lab guide for the Welcome to the Backup and Restore for Red Hat OpenShift Virtualization with Trilio, which can be delivered by Red Hat Associates to customers and interested parties all over the world.

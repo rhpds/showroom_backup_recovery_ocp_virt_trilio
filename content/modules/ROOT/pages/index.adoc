@@ -1,4 +1,4 @@
-= LB2788 - Protecting VMs in Red Hat OpenShift Virtualization with Trilio
+= Backup and Recovery of Red Hat OpenShift Virtualization VMs using Trilio
 
 Welcome to Protecting VMs in Red Hat OpenShift Virtualization with Trilio
 

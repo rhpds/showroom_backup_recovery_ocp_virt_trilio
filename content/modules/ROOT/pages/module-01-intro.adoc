@@ -57,7 +57,7 @@ Console login is available with:
 .Password:
 [,sh,role="execute",subs="+macros,+attributes"]
 ----
-{trilio_password}
+{openshift_cluster_user_password}
 ----
 
 [IMPORTANT]

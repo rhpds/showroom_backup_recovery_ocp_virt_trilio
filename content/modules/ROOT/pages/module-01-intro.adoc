@@ -57,7 +57,7 @@ Console login is available with:
 .Password:
 [,sh,role="execute",subs="+macros,+attributes"]
 ----
-{ocp4_workload_authentication_htpasswd_user_base}
+{ocp4_workload_trilio_backup_restore_vms_dr_user_password}
 ----
 
 [IMPORTANT]
